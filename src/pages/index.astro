@@ -1,0 +1,74 @@
+---
+import Layout from "../layouts/Layout.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import TimeLine from "../components/TimeLine/TimeLine.astro";
+import GitHub from "../components/icons/GitHub.astro";
+import LinkedIn from "../components/icons/LinkedIn.astro";
+import Mail from "../components/icons/Mail.astro";
+import SocialPill from "../components/SocialPill.astro";
+
+const copiarAlPortapapeles = function copiarAlPortapapeles() {
+	// Seleccionar el texto que queremos copiar
+	var textoACopiar = document.getElementById("email").innerText;
+
+	// Utilizar el API del portapapeles para copiar el texto
+	navigator.clipboard
+		.writeText(textoACopiar)
+		.then(() => {
+			alert("Texto copiado al portapapeles: " + textoACopiar);
+		})
+		.catch((err) => {
+			console.error("Error al copiar al portapapeles: ", err);
+		});
+}
+---
+
+<Layout
+	title="Porfolio - Lucas Cordero"
+	description="Programador web con 2 años de experiencia, FullStack, apasionado por crear soluciones digitales eficientes y experiencias de usuario excepcionales"
+>
+	<main>
+		<SectionContainer class="pt-44 pb-32">
+			<div class="flex flex-row items-center pb-6">
+				<img
+					class="rounded-full size-20 mb-4 mr-4"
+					src="https://media.licdn.com/dms/image/C4D03AQH9ISmubhMoYw/profile-displayphoto-shrink_800_800/0/1644331008249?e=1711584000&v=beta&t=0zf3w1eHP07hOVXRs8Di4hhVAVN0X7MUiijgMZachWA"
+					alt="Lucas Photo"
+				/>
+				<h1 class="text-white font-bold text-5xl flex flex-row gap-x-4">
+					Hola! Soy Lucas Cordero
+				</h1>
+			</div>
+			<h2 class="text-2xl opacity-80 text-wrap">
+				Soy un desarrollador web argentino 🇦🇷 con <span
+					class="text-blue-300/80">+2 años de experiencia</span
+				>. Actualmente trabajando con <span class="text-green-300/90"
+					>Symfony 5 y 6</span>. 
+					<!-- junto a <span class="text-blue-300/80">PHP 7 y 8</span>. -->
+			</h2>
+			<nav class="mt-8 flex flex-row gap-x-5 items-center">
+				<SocialPill href="https://www.github.com/lucordero">
+					<GitHub
+						class="size-6"
+					/>
+					GitHub
+				</SocialPill>
+				<SocialPill href="https://www.linkedin.com/in/lucascordero/">
+					<LinkedIn
+						class="size-6 fill-white"
+					/>
+					LinkedIn
+				</SocialPill>
+				<SocialPill onclick="copiarAlPortapapeles()">
+					<Mail class="size-6">
+					</Mail>
+					<span id="email" >lucascordero1997@gmail.com</span>
+				</SocialPill>
+			</nav>
+		</SectionContainer>
+
+		<SectionContainer id="experiencia">
+			<TimeLine></TimeLine>
+		</SectionContainer>
+	</main>
+</Layout>
