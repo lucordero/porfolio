@@ -1,0 +1,28 @@
+---
+import GitHub from "../icons/GitHub.astro";
+import LinkedIn from "../icons/LinkedIn.astro";
+import Mail from "../icons/Mail.astro";
+
+
+---
+<nav class="mt-8 flex flex-row gap-x-8 items-center">
+    <a href="https://www.github.com/lucordero" target="_blank">
+        <GitHub class="size-6 hover:scale-125 transition"/>
+    </a>
+
+    <a href="https://www.linkedin.com/in/lucascordero" target="_blank">
+        <LinkedIn class="size-6 fill-white hover:scale-125 transition"/>
+    </a>
+
+    <!-- TODO: mostrar tooltip al presionar el boton -->
+    <button class="flex hover:scale-125 transition cursor-pointer" id="copyEmail" onclick="copyText()">
+        <Mail class="size-8 "></Mail>
+    </button>
+</nav>
+<script is:inline>
+    let copyEmailElement = document.getElementById('copyEmail')
+	copyEmailElement.addEventListener('click', function() {
+		navigator.clipboard.writeText('lucascordero1997@gmail.com');
+	});
+    
+</script>
