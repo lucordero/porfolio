@@ -22,15 +22,16 @@ import Footer from "../components/Footer.astro";
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/Logo.svg" />
 		<meta name="generator" content={Astro.generator} />
+
 		<title>{title}</title>
 	</head>
 	<body class="overflow-x-hidden">
-		<div class="relative h-full w-full bg-slate-950">
+		<div class="relative h-full w-full bg-slate-600">
 			<div
-				class="absolute bottom-0 left-[-20%] right-0 top-[-10%] h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(6,78,59,.25),rgba(255,255,255,0))]"
+				class="-z-50 absolute bottom-0 left-[-20%] right-0 top-[-10%] h-[1000px] w-[1000px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(6,78,59,.25),rgba(255,255,255,0))]"
 			>
 			</div><div
-				class="absolute bottom-0 right-[-20%] top-[-10%] h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(30,58,138,.35),rgba(255,255,255,0))]"
+				class="-z-50 absolute bottom-0 right-[-20%] top-[1000px] h-[1000px] w-[1000px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(30,58,138,.35),rgba(255,255,255,0))]"
 			>
 			</div>
 		</div>
@@ -38,6 +39,9 @@ import Footer from "../components/Footer.astro";
 		<Header />
 		<slot />
 		<Footer />
+
+		<script src="https://unpkg.com/popper.js@1"></script>
+		<script src="https://unpkg.com/tippy.js@4"></script>
 	</body>
 </html>
 
@@ -53,6 +57,7 @@ import Footer from "../components/Footer.astro";
 		justify-content: center;
 		min-height: 100vh;
 		scroll-behavior: smooth;
+		background-image: url('../icons/noisy.webp');
 	}
 
 	@media (prefers-reduced-motion: reduce) {
