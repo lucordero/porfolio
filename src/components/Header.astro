@@ -1,9 +1,15 @@
-<header class="flex justify-between items-center py-5 md:w-[768px] lg:w-[1024px] mx-auto" >
+---
+import ThemeToggle from "./ThemeToggle.astro";
+import Logo from '../icons/Logo.astro'
+---
+
+<header class="flex justify-between items-center py-5 md:w-[768px] lg:w-[1024px] mx-auto gap-x-2" >
     <!--  -->
-    <img src="/Logo.svg" alt="Logo Lucas Cordero" class="size-16 dark:fill-white fill-black">
+    <a href="/"><Logo class="size-16 dark:fill-white fill-black" /></a>
     <nav class="flex flex-row gap-x-10 opacity-80 ">
-        <a href="/#experiencia">Experiencia</a>
-        <a href="/#proyectos">Projectos</a>
-        <a href="/#sobre-mi">Sobre mí</a>
+        <a class="hover:bg-black/15 rounded-3xl py-1 px-2" href="/#experiencia">Experiencia</a>
+        <a class="hover:bg-black/15 rounded-3xl py-1 px-2" href="/#proyectos">Projectos</a>
+        <a class="hover:bg-black/15 rounded-3xl py-1 px-2" href="/#sobre-mi">Sobre mí</a>
     </nav>
+    <ThemeToggle/>
 </header>
