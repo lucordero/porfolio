@@ -6,10 +6,10 @@ import SystemIcon from '../icons/System.astro'
 
 ---
 <div class="rounded-full p-2 dark:hover:bg-white/10 hover:bg-black/10">
-    <button type="button" id='darkTheme' hidden class="hs-dark-mode-active:hidden block hs-dark-mode group items-center text-gray-600 font-medium dark:text-gray-400 ">
+    <button name="color-toggle-dark" type="button" id='darkTheme' hidden class="hs-dark-mode-active:hidden block hs-dark-mode group items-center text-gray-600 font-medium dark:text-gray-400 ">
         <SunIcon/>
     </button>
-    <button type="button" id='lightTheme' hidden class="hs-dark-mode-active:block hidden hs-dark-mode group items-center text-gray-600 font-medium dark:text-gray-400 ">
+    <button name="color-toggle-light" type="button" id='lightTheme' hidden class="hs-dark-mode-active:block hidden hs-dark-mode group items-center text-gray-600 font-medium dark:text-gray-400 ">
         <MoonIcon />
     </button>
 </div>

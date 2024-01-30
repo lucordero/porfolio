@@ -6,16 +6,16 @@ import Mail from "../icons/Mail.astro";
 
 ---
 <nav class="mt-6 flex flex-row gap-x-10 items-center justify-between sm:gap-x-16 sm:justify-around md:justify-normal">
-    <a href="https://www.github.com/lucordero" target="_blank">
+    <a aria-label="Go to Luca Cordero GitHub page" href="https://www.github.com/lucordero" target="_blank">
         <GitHub class="size-10 sm:size-8 hover:scale-125 transition dark:fill-white fill-black"/>
     </a>
 
-    <a href="https://www.linkedin.com/in/lucascordero" target="_blank">
+    <a aria-label="Go to profile LinkedIn Lucas Cordero" href="https://www.linkedin.com/in/lucascordero" target="_blank">
         <LinkedIn class="size-10 sm:size-8 dark:fill-white hover:scale-125 transition  fill-black"/>
     </a>
 
     <!-- TODO: mostrar tooltip al presionar el boton -->
-    <button class="flex hover:scale-125 transition cursor-pointer " id="copyEmail" onclick="copyText()">
+    <button name="mail" class="flex hover:scale-125 transition cursor-pointer " id="copyEmail" onclick="copyText()">
         <Mail class="size-12 sm:size-10 stroke-black dark:stroke-white"></Mail>
     </button>
 </nav>
