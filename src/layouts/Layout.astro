@@ -42,14 +42,17 @@ import Footer from "../components/Footer.astro";
 </html>
 
 <style is:global>
-	body {
+	html{
 		font-family: "Noto Sans", sans-serif, sans-serif;
+		scroll-behavior: smooth;
+	}
+	body {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		min-height: 100vh;
-		scroll-behavior: smooth;
 		background-image: url('../icons/noisy.webp');
+		overscroll-behavior: none;
 	}
 
 	@media (prefers-reduced-motion: reduce) {
