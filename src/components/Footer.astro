@@ -3,8 +3,8 @@ import AstroIcon from "../icons/AstroIcon.astro";
 const currentYear = new Date().getFullYear();
 ---
 
-<footer class="pt-44 flex flex-col gap-12 text-center text-sm text-gray-400 dark:text-gray-400/50 md:flex-row md:justify-between md:pt-44 md:pb-12 md:w-[768px] lg:w-[968px] mx-auto">
-	<div class="flex flex-col gap-2 md:flex md:gap-4 md:flex-wrap md:justify-start md:text-start">
+<footer class="pt-44 pb-4 flex flex-col gap-5 text-center items-center text-sm text-gray-400 dark:text-gray-400/50 md:flex-row md:justify-between md:pt-44 md:pb-12 md:w-[768px] lg:w-[968px] mx-auto">
+	<div class="flex flex-col gap-1 md:flex md:gap-4 md:flex-wrap md:justify-start md:text-start">
 		<p>
 			Inspired in <a class="underline decoration-blue-200/30 underline-offset-4" href="https://github.com/midudev/porfolio.dev">midudev portfolio</a>
         </p>
@@ -12,11 +12,9 @@ const currentYear = new Date().getFullYear();
             Developed in <span class="text-blue-400 font-semibold">Argentina</span> with <a href="https://astro.build/">Astro</a>
             <AstroIcon class="size-5 inline"/>
         </p> 
-		
-		
 	</div>
-	<p class="flex justify-center gap-4 flex-wrap md:justify-end md:flex-col">
-        <a class="underline decoration-transparent decoration-solid underline-offset-2 transition hover:decoration-blue-200" href="https://github.com/lucordero"> GitHub</a>
+	<p class="flex justify-center gap-2 flex-wrap md:justify-end md:flex-col">
+        <a class="underline decoration-transparent decoration-solid underline-offset-2 transition hover:decoration-blue-200" href="https://github.com/lucordero">GitHub</a>
 		<a class="underline decoration-transparent decoration-solid underline-offset-2 transition hover:decoration-blue-200" href="https://www.linkedin.com/in/lucascordero"> LinkedIn</a>
 	</p>
     <p>&copy; {currentYear} Lucas Cordero</p>
