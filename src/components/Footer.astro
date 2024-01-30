@@ -1,3 +1,39 @@
-<nav class="py-44">
-    
-</nav>
+---
+import AstroIcon from "../icons/AstroIcon.astro";
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="pt-44 py-10 flex flex-col gap-12 text-center text-gray-400 dark:text-gray-400/50 text-sm md:flex-row md:justify-between md:pt-44 md:pb-12 md:w-[768px] lg:w-[968px] mx-auto">
+	<div class="flex flex-col gap-2 md:flex-row md:gap-4 md:flex-wrap">
+		<p>
+			Designed inspired in <a class="underline decoration-slate-50/30 underline-offset-4" href="https://github.com/midudev/porfolio.dev">midudev portfolio</a>
+        </p>
+        <p>
+            Developed in <span class="text-blue-400 font-semibold">Argentina</span> with <a href="https://astro.build/">Astro</a>
+            <AstroIcon class="size-5 inline"/>
+        </p> 
+		
+		<p>&copy; {currentYear} Lucas Cordero</p>
+	</div>
+	<p class="flex justify-center gap-4 flex-wrap md:justify-end">
+		<a class="underline decoration-transparent decoration-solid underline-offset-1 transition hover:decoration-blue-200" href="https://www.linkedin.com/in/lucascordero"> LinkedIn</a>
+		<a class="underline decoration-transparent decoration-solid underline-offset-1 transition hover:decoration-blue-200" href="https://github.com/lucordero"> GitHub</a>
+	</p>
+</footer>
+<style>
+
+
+	@media (min-width: 50em) {
+		
+
+		.group {
+			flex-direction: row;
+			gap: 1rem;
+			flex-wrap: wrap;
+		}
+
+		.socials {
+			justify-content: flex-end;
+		}
+	}
+</style>
