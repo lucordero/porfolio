@@ -6,7 +6,10 @@ export default {
 		extend: {
 			screens:{
 				'xs':'400px',
-			}
+			},
+			backgroundImage: theme=>({
+			'noisy-pattern': "url('/src/icons/noisy.webp')"
+			})
 		},
 	},
 	plugins: [],

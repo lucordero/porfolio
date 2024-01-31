@@ -1,20 +1,15 @@
 ---
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import SpeedInsights  from "@vercel/speed-insights/astro"
-
+import "@fontsource/noto-sans/400.css";
+import "@fontsource/noto-sans/600.css";
+import "@fontsource/noto-sans/700.css";
 interface Props {
 	title: string;
 	description: string;
 }
-
 const { title, description } = Astro.props;
-
-import "@fontsource/noto-sans/400.css";
-import "@fontsource/noto-sans/600.css";
-import "@fontsource/noto-sans/700.css";
 ---
-
 <!doctype html>
 <html lang="es" class="dark">
 	<head>
@@ -25,8 +20,7 @@ import "@fontsource/noto-sans/700.css";
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body class="overflow-x-hidden overscroll-x-none bg-yellow-50/10 dark:bg-[#0c1015] text-black dark:text-white">
-		<SpeedInsights/>
+	<body class="overflow-x-hidden overscroll-x-none bg-yellow-50/10 dark:bg-[#0c1015] text-black dark:text-white bg-noisy-pattern">
 		<div class="relative h-full ">
 			<div
 				class="-z-50 absolute bottom-0 left-[-20%] right-0 top-[150px] md:top-[-10%] xs:size-[300px] sm:size-[500px] md:size-[1000px] rounded-full dark:bg-[radial-gradient(circle_farthest-side,rgba(6,78,59,.25),rgba(255,255,255,0))]"
@@ -53,7 +47,6 @@ import "@fontsource/noto-sans/700.css";
 		flex-direction: column;
 		justify-content: center;
 		min-height: 100vh;
-		background-image: url('../icons/noisy.webp');
 		overscroll-behavior: none;
 	}
 
