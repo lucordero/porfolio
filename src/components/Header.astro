@@ -1,15 +1,33 @@
 ---
+import Logo from "../icons/Logo.astro";
 import ThemeToggle from "./ThemeToggle.astro";
-import Logo from '../icons/Logo.astro'
 ---
 
-<header class="flex justify-between items-center py-5 md:w-[768px] lg:w-[968px] mx-auto gap-x-1" >
+<header
+    class="flex justify-between items-center py-5 md:w-[768px] lg:w-[968px] mx-auto gap-x-1"
+>
     <!--  -->
-    <a aria-label="Logo from Lucas Cordero" href="/"><Logo class="size-8 md:size-10 lg:size-16 dark:fill-white fill-black" /></a>
-    <nav class="flex flex-row gap-x-2 opacity-80 ">
-        <a class="hover:bg-black/15 rounded-3xl py-1 px-2 dark:hover:bg-white/15" href="/#experiencia">Experiencia</a>
-        <a class="hover:bg-black/15 rounded-3xl py-1 px-2 dark:hover:bg-white/15" href="/#proyectos">Projectos</a>
-        <a class="hover:bg-black/15 rounded-3xl py-1 px-2 dark:hover:bg-white/15" href="/#sobre-mi">Sobre mí</a>
+    <a aria-label="Logo from Lucas Cordero" href="/"
+        ><Logo
+            class="size-8 md:size-10 lg:size-16 dark:fill-white fill-black"
+        /></a
+    >
+    <nav class="flex flex-row gap-x-2 opacity-80">
+        <a class="dark:hover:bg-white/15" href="/#experiencia">Experiencia</a>
+        <a class="dark:hover:bg-white/15" href="/#proyectos">Projectos</a>
+        <a class="dark:hover:bg-white/15" href="/#sobre-mi">Sobre mí</a>
     </nav>
-    <ThemeToggle/>
+    <ThemeToggle />
 </header>
+
+<style>
+    a {
+        padding: 0.25rem 0.5rem;
+        border-radius: 1.5rem;
+    }
+
+    a:hover {
+        background-color: rgb(0 0 0 / 0.15);
+    }
+
+</style>
