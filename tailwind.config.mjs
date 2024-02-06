@@ -4,6 +4,9 @@ export default {
 	darkMode: 'class',
 	theme: {
 		extend: {
+			fontFamily:{
+				'hanken-grotesk': ['"Hanken Grotesk"', 'ui-sans-serif', 'system-ui']
+			},
 			screens:{
 				'xs':'400px',
 			},
