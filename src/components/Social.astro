@@ -4,6 +4,7 @@ import LinkedIn from "../icons/LinkedIn.astro";
 import Mail from "../icons/Mail.astro";
 
 
+
 ---
 <nav class="mt-6 flex flex-row gap-x-10 items-center justify-between sm:gap-x-16 sm:justify-around md:justify-normal">
     <a aria-label="Go to Luca Cordero GitHub page" href="https://www.github.com/lucordero" target="_blank">
@@ -15,14 +16,35 @@ import Mail from "../icons/Mail.astro";
     </a>
 
     <!-- TODO: mostrar tooltip al presionar el boton -->
-    <button name="mail" class="flex hover:scale-125 transition cursor-pointer " id="copyEmail" onclick="copyText()">
+    <button name="mail" class="flex hover:scale-125 transition cursor-pointer"  id="copyEmail">
         <Mail class="size-12 sm:size-10 stroke-black dark:stroke-white"></Mail>
     </button>
 </nav>
-<script is:inline>
+<script>
+    import tippy from 'tippy.js';
+    import 'tippy.js/dist/tippy.css'; // optional for styling
+    import 'tippy.js/themes/translucent.css';
+
     let copyEmailElement = document.getElementById('copyEmail')
 	copyEmailElement.addEventListener('click', function() {
 		navigator.clipboard.writeText('lucascordero1997@gmail.com');
+        setTimeout(function() {
+        instance.hide();
+    }, 2000);
 	});
     
+    const instance = tippy(document.getElementById('copyEmail'))
+
+    instance.setProps({
+        content: 'Email Copiado!',
+        trigger: 'click',
+        placement: 'bottom',
+        theme: 'material',
+        animation:'fade',
+        delay:[100,100]
+    });
+
+
+    
+
 </script>
